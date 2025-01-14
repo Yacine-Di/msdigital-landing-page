@@ -8,11 +8,11 @@ import { useState } from 'react';
 
 const NavItems = ({ onClick }: { onClick?: () => void }) => {
     return (
-        <ul className="flex flex-col md:flex-row md:text-lg text-xl gap-4 ">
+        <ul className="flex flex-col md:flex-row md:text-lg text-xl md:gap-4 ">
             {navLinks.map(({ id, name, href }) => (
                 <li
                     key={id}
-                    className="max-md:hover:bg-menu hover:text-white p-2 rounded-md"
+                    className="max-md:hover:bg-menu hover:text-white py-2 rounded-md"
                 >
                     <a href={href} onClick={onClick}>
                         {name}
@@ -30,8 +30,8 @@ const Navbar = () => {
     const closeMenu = () => setIsOpen(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-alternate">
-            <div className="max-w-7xl mx-auto p-5 flex justify-between items-center font-lato max-md:border-2 border-b-dark">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-alternate max-w-full">
+            <div className=" w-screen flex justify-between items-center py-5 md:px-10 px-5 font-lato max-md:border-2 border-b-dark">
                 <Image src={logo} alt="logo" width={60} height={80} />
                 <input
                     type="checkbox"
