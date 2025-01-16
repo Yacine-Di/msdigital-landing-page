@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 const NavItems = ({ onClick }: { onClick?: () => void }) => {
     return (
-        <ul className="flex flex-col md:flex-row md:text-lg text-xl md:gap-4 ">
+        <ul className="flex flex-col md:flex-row md:text-lg text-xl md:gap-5 ">
             {navLinks.map(({ id, name, href }) => (
                 <li
                     key={id}
