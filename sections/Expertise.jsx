@@ -3,7 +3,10 @@ import { expertiseItems } from '../constants/index';
 
 const ExpertiseItems = () => {
     return expertiseItems.map(({ id, icon, alt, title, text }) => (
-        <div key={id} className="p-10 bg-footer m-2 rounded-md text-white">
+        <div
+            key={id}
+            className="p-10 bg-footer m-2 rounded-md text-white basis-1/3"
+        >
             <Image
                 width={40}
                 height={40}
@@ -21,7 +24,7 @@ const Expertise = () => {
     return (
         <div className="bg-alternate p-5">
             <div className="max-w-7xl mx-auto flex flex-col align-center">
-                <h2 className="text-center text-text-secondary text-4xl text-">
+                <h2 className="text-center text-text-secondary text-4xl">
                     Mon expertise
                 </h2>
                 <p className="p-5 text-xl font-lato">

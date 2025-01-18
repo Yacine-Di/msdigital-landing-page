@@ -3,7 +3,7 @@ import hero from '../assets/hero.svg';
 
 const Hero = () => {
     return (
-        <section className="max-w-7xl mx-auto min-h-screen flex">
+        <section className="max-w-7xl mx-auto min-h-screen flex" id="home">
             <div className="flex flex-col md:flex-row pt-36 px-6 gap-3 my-auto">
                 <div className="mx-auto p-5 flex flex-col basis-1/2 box-border">
                     <p className="text-4xl md:text-5xl text-primary font-bold font-playfair">

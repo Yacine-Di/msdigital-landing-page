@@ -8,3 +8,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+* {
+    scroll-behavior: smooth;
+}
+
+@layer utilities {
+    .featured-check {
+        @apply before:content-[''] before:block before:mr-2 before:bg-cover before:w-6 before:h-6 before:bg-[url('/check.svg')] before:bg-no-repeat;
+    }
+}
