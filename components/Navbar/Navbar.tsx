@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-alternate max-w-full">
-            <div className=" w-screen flex justify-between items-center py-5 md:px-10 px-5 font-lato max-md:border-2 border-b-dark">
+            <div className=" w-screen flex justify-between items-center h-16 md:h-20 md:px-10 px-5 font-lato max-md:border-2 border-b-dark">
                 <Image src={logo} alt="logo" width={60} height={80} />
                 <input
                     type="checkbox"
