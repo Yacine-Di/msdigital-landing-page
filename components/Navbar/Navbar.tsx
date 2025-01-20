@@ -36,9 +36,10 @@ const Navbar = () => {
                 <input
                     type="checkbox"
                     role="button"
+                    checked={isOpen}
                     aria-label="Display the menu"
                     className={`${styles.menu} menu block md:hidden`}
-                    onClick={toggleMenu}
+                    onChange={toggleMenu}
                 />
                 <nav className="md:flex hidden">
                     <NavItems />
