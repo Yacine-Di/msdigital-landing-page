@@ -34,21 +34,21 @@ export const navLinks = [
 export const expertiseItems = [
     {
         id: 1,
-        icon: '/photo.svg',
+        icon: '/assets/photo.svg',
         alt: 'photo-icon',
         title: 'Des photos et vidéos engageantes pour valoriser vos plats.',
         text: 'Je mets en valeur vos plats avec des concepts originaux et des rendus vidéos et photos de qualité.',
     },
     {
         id: 2,
-        icon: '/handshake.svg',
+        icon: '/assets/handshake.svg',
         alt: 'handshake-icon',
         title: 'Un processus collaboratif pour des résultats sur mesure.',
         text: "J'échange avec vous pour comprendre vos besoins puis je conçois des visuels percutants qui mettent en valeur votre identité",
     },
     {
         id: 3,
-        icon: '/map.svg',
+        icon: '/assets/map.svg',
         alt: 'map-icon',
         title: 'Un déplacement sur site pour un service unique.',
         text: 'Je me déplace dans votre restaurant pour mettre en valeur vos produits pour produire une solution unique',
@@ -59,7 +59,7 @@ export const servicesItems = [
     {
         id: 1,
         title: 'Starter',
-        price: 'À partir de 699€',
+        price: 'À partir de 499€',
         description:
             'Idéal pour poser les bases et captiver vos clients avec des visuels soignés.',
         features: [
@@ -69,8 +69,6 @@ export const servicesItems = [
             'Livraison rapide sous 5 jours',
             'Conseils basiques pour la mise en avant sur Instagram',
         ],
-        highlights:
-            'Une solution rapide et efficace pour booster votre visibilité.',
     },
     {
         id: 2,
@@ -86,7 +84,6 @@ export const servicesItems = [
             'Création de posts et stories prêts à publier',
             'Mini-guide pour booster l’engagement sur vos réseaux',
         ],
-        highlights: 'Parfait pour augmenter votre engagement en ligne.',
     },
     {
         id: 3,
@@ -106,8 +103,6 @@ export const servicesItems = [
             'Conseils en branding pour améliorer votre image de marque',
             'Planification d’un calendrier de publication pour vos réseaux sociaux',
         ],
-        highlights:
-            'Un service clé en main pour transformer votre restaurant en une référence.',
     },
     {
         id: 4,
@@ -120,7 +115,5 @@ export const servicesItems = [
             'Conception de campagnes uniques.',
             'Création de contenus sur demande.',
         ],
-        highlights:
-            'Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé.',
     },
 ];

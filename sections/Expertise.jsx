@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import { expertiseItems } from '../constants/index';
+import { motion } from 'framer-motion';
 
 const ExpertiseItems = () => {
     return expertiseItems.map(({ id, icon, alt, title, text }) => (
@@ -22,8 +25,14 @@ const ExpertiseItems = () => {
 
 const Expertise = () => {
     return (
-        <div className="bg-alternate p-5">
-            <div className="max-w-7xl mx-auto flex flex-col align-center">
+        <section className="bg-alternate p-5">
+            <motion.section
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+                className="max-w-7xl mx-auto flex flex-col align-center"
+            >
                 <h2 className="text-center text-text-secondary text-4xl">
                     Mon expertise
                 </h2>
@@ -37,8 +46,8 @@ const Expertise = () => {
                 <div className="flex flex-col md:flex-row max-w-7xl">
                     <ExpertiseItems />
                 </div>
-            </div>
-        </div>
+            </motion.section>
+        </section>
     );
 };
 

@@ -14,12 +14,20 @@ const ServiceItems = () => {
                 <p className="font-lato text-lg py-2 border-b-2">
                     {description}
                 </p>
+                <button className="font-lato text-lg flex items-center justify-center w-full mx-auto border-b-2 p-2 ">
+                    <a
+                        href="#contact"
+                        className="bg-footer py-2 w-3/4 text-text-footer rounded-lg"
+                    >
+                        Contactez-moi
+                    </a>
+                </button>
                 <div className="my-4">
                     {features.map((feature, index) => (
-                        <div key={index} className="flex mt-2 font-lato">
+                        <p key={index} className="flex mt-2 font-lato">
                             <span className="featured-check"></span>
                             {feature}
-                        </div>
+                        </p>
                     ))}
                 </div>
             </div>
@@ -29,7 +37,7 @@ const ServiceItems = () => {
 
 const Services = () => {
     return (
-        <div className="bg-default p-5" id="services">
+        <section className="bg-default p-5" id="services">
             <div className="max-w-7xl mx-auto flex flex-col justify-center">
                 <h2 className="text-center text-text-secondary text-4xl font-lato">
                     Services
@@ -38,7 +46,7 @@ const Services = () => {
                     <ServiceItems />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
