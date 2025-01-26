@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import logo from '../../assets/logo.png';
-import { navLinks } from '../../constants/index';
+import { navLinks } from '../../utils/constants';
 import styles from './Navbar.module.css';
 import { useState } from 'react';
 
