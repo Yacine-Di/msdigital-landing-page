@@ -30,7 +30,10 @@ const Expertise = () => {
     const isClient = useIsClient();
 
     return (
-        <section className="bg-default p-5 scroll-mt-20" id="expertise">
+        <section
+            className="bg-default p-5 scroll-mt-16 md:scroll-mt-20"
+            id="expertise"
+        >
             <section className="max-w-7xl mx-auto flex flex-col align-center">
                 <h2 className="text-center text-text-secondary font-lato font-bold text-4xl py-2">
                     Mon expertise

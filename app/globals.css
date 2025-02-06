@@ -17,4 +17,16 @@ body {
     .featured-check {
         @apply before:content-[''] before:block before:mr-2 before:bg-cover before:w-6 before:h-6 before:bg-[url('/assets/check.svg')] before:bg-no-repeat;
     }
+
+    .field-label {
+        @apply text-xl font-lato;
+    }
+
+    .input-text {
+        @apply w-full rounded-lg py-2 px-5 min-h-14 text-lg font-lato;
+    }
+
+    .social-icon {
+        @apply w-10 h-10 rounded-full flex justify-center items-center;
+    }
 }

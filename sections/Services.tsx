@@ -47,7 +47,7 @@ const Services = () => {
         <>
             {isClient ? (
                 <motion.div
-                    className="bg-alternate p-5 scroll-mt-20"
+                    className="bg-alternate p-5 scroll-mt-16 md:scroll-mt-20"
                     id="services"
                 >
                     <div className="max-w-7xl mx-auto flex flex-col justify-center">

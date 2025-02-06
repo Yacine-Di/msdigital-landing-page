@@ -7,7 +7,10 @@ import { fadeIn } from '@/utils/animations';
 
 const About = () => {
     return (
-        <section className="bg-default p-5 scroll-mt-20" id="about">
+        <section
+            className="bg-default p-5 scroll-mt-16 md:scroll-mt-20"
+            id="about"
+        >
             <motion.div
                 variants={fadeIn}
                 initial="initial"

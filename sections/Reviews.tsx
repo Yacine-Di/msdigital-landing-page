@@ -11,7 +11,7 @@ const Reviews = () => {
 
     return (
         <section
-            className="p-5 bg-gray-100 text-center scroll-mt-20"
+            className="p-5 bg-gray-100 text-center scroll-mt-16 md:scroll-mt-20"
             id="reviews"
         >
             <h2 className="text-4xl font-lato font-bold py-2">
