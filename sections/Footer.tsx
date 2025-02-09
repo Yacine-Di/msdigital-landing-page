@@ -14,22 +14,14 @@ const Footer = () => {
                     target="_blank"
                     className="social-icon"
                 >
-                    <img
-                        src="/assets/instagram.svg"
-                        alt="instagram-icon"
-                        className=""
-                    />
+                    <img src="/assets/instagram.svg" alt="instagram-icon" />
                 </a>
                 <a
                     href="https://youtube.com"
                     target="_blank"
                     className="social-icon"
                 >
-                    <img
-                        src="/assets/youtube.svg"
-                        alt="youtube-icon"
-                        className=""
-                    />
+                    <img src="/assets/youtube.svg" alt="youtube-icon" />
                 </a>
             </div>
 

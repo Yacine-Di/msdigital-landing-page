@@ -41,7 +41,7 @@ const Expertise = () => {
                 <p className="p-5 text-xl font-lato">{expertiseSubtitle}</p>
                 {isClient ? (
                     <motion.div
-                        className="flex flex-col lg:flex-row max-w-7xl"
+                        className="flex flex-col p-2 lg:flex-row max-w-7xl"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
@@ -50,7 +50,7 @@ const Expertise = () => {
                         <ExpertiseItems />
                     </motion.div>
                 ) : (
-                    <div className="flex flex-col lg:flex-row max-w-7xl">
+                    <div className="flex flex-col p-2 lg:flex-row max-w-7xl">
                         <ExpertiseItems />
                     </div>
                 )}

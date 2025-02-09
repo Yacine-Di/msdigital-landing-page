@@ -67,6 +67,7 @@ export const servicesItems = [
     {
         id: 1,
         title: 'Starter',
+        type: 'starter',
         price: 'À partir de 499€',
         description:
             'Idéal pour poser les bases et captiver vos clients avec des visuels soignés.',
@@ -81,6 +82,7 @@ export const servicesItems = [
     {
         id: 2,
         title: 'Avancé',
+        type: 'advanced',
         price: 'À partir de 1199€',
         description:
             'Un pack complet pour attirer plus de clients et valoriser votre restaurant.',
@@ -96,6 +98,7 @@ export const servicesItems = [
     {
         id: 3,
         title: 'Premium',
+        type: 'premium',
         price: 'À partir de 1999€',
         description:
             'La solution parfaite pour améliorer votre image et fidéliser vos clients.',
@@ -114,6 +117,7 @@ export const servicesItems = [
     {
         id: 4,
         title: 'Sur mesure',
+        type: 'custom',
         price: 'Tarif personnalisé',
         description:
             'Des solutions créatives et adaptées pour répondre à vos besoins spécifiques.',
@@ -148,12 +152,12 @@ export const reviewItems = [
     },
     {
         id: 3,
-        restaurantName: 'Gold Beef',
-        text: 'lorem epsLorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestias quaerat soluta excepturi rem totam id cupiditate atque suscipit? Aperiam necessitatibus facere commodi, voluptatum error tenetur illo libero nam earum.',
+        restaurantName: 'Smashed',
+        text: 'Encore une fois parfait, on est écouté et conseillé du début à la fin et il n’hésite pas à faire des retouches jusqu’à ce que le résultat soit parfait ! Pas la première ni la dernière collaboration !',
         rating: 5,
-        image: '/assets/goldbeef.jpg',
+        image: '/assets/smashed.png',
         location: 'Rouen, France',
-        serviceProvided: '',
+        serviceProvided: 'Sur mesure',
         date: '01-01-2025',
     },
     {

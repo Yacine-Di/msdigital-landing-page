@@ -6,42 +6,61 @@ import useIsClient from '@/utils/hooks';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 
-const ServiceItems = () => {
-    return servicesItems.map(({ id, title, price, description, features }) => (
-        <motion.div
-            key={id}
-            className="m-2 p-2 border-4 border-white rounded-lg basis-1/4"
-            variants={fadeInUp}
-        >
-            <h3 className="text-xl font-bold font-playfair py-2">{title}</h3>
-            <p className="font-playfair text-2xl py-2 font-bold">{price}</p>
-            <p className="font-lato text-lg py-2 border-b-2 border-white">
-                {description}
-            </p>
-            <button className="font-lato text-lg flex items-center justify-center w-full mx-auto border-b-2 border-white p-2 ">
-                <a
-                    href="#contact"
-                    className="bg-footer py-2 w-3/4 text-text-footer rounded-lg"
-                >
-                    Contactez-moi
-                </a>
-            </button>
-            <div className="my-4">
-                {features.map((feature, index) => (
-                    <p key={index} className="flex mt-2 font-lato">
-                        <span className="featured-check"></span>
-                        {feature}
-                    </p>
-                ))}
-            </div>
-        </motion.div>
-    ));
+interface ServiceItemProps {
+    setSelectedService: (service: string) => void;
+}
+
+const ServiceItems: React.FC<ServiceItemProps> = ({ setSelectedService }) => {
+    const handleServiceClick = (service: string) => {
+        setSelectedService(service);
+
+        document
+            .getElementById('contact')
+            ?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    return servicesItems.map(
+        ({ id, title, type, price, description, features }) => (
+            <motion.div
+                key={id}
+                className="m-2 p-2 border-4 border-white rounded-lg basis-1/4"
+                variants={fadeInUp}
+            >
+                <h3 className="text-xl font-bold font-playfair py-2">
+                    {title}
+                </h3>
+                <p className="font-playfair text-2xl py-2 font-bold">{price}</p>
+                <p className="font-lato text-lg py-2 border-b-2 border-white">
+                    {description}
+                </p>
+                <div className=" w-full flex items-center justify-center  border-b-2 border-white p-2">
+                    <button
+                        className="text-text-footer font-lato text-lg w-3/4 bg-footer py-2 mx-auto rounded-lg"
+                        onClick={() => handleServiceClick(type)}
+                    >
+                        Contactez-moi
+                    </button>
+                </div>
+                <div className="my-4">
+                    {features.map((feature, index) => (
+                        <p key={index} className="flex mt-2 font-lato">
+                            <span className="featured-check"></span>
+                            {feature}
+                        </p>
+                    ))}
+                </div>
+            </motion.div>
+        ),
+    );
 };
 
-const Services = () => {
+const Services = ({
+    setSelectedService,
+}: {
+    setSelectedService: (service: string) => void;
+}) => {
     const isClient = useIsClient();
     const isMobile = useMediaQuery({ maxWidth: 768 });
-    console.log(isMobile);
 
     return (
         <>
@@ -64,7 +83,9 @@ const Services = () => {
                             }}
                             variants={staggered}
                         >
-                            <ServiceItems />
+                            <ServiceItems
+                                setSelectedService={setSelectedService}
+                            />
                         </motion.div>
                     </div>
                 </motion.div>
@@ -75,7 +96,9 @@ const Services = () => {
                             Services
                         </h2>
                         <div className="flex flex-col lg:flex-row p-5">
-                            <ServiceItems />
+                            <ServiceItems
+                                setSelectedService={setSelectedService}
+                            />
                         </div>
                     </div>
                 </div>

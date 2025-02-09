@@ -19,7 +19,7 @@ const Reviews = () => {
             </h2>
             {isClient ? (
                 <motion.div
-                    className="max-w-7xl mx-auto my-2 flex flex-wrap justify-around gap-6"
+                    className="max-w-7xl mx-auto my-2 p-2 flex flex-wrap justify-around gap-6"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}

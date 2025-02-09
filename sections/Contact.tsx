@@ -2,18 +2,29 @@
 
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import SelectComponent from '@/components/SelectComponent';
 
-const Contact = () => {
+interface ContactProps {
+    selectedService: string | null;
+    setSelectedService: (service: string) => void;
+}
+
+const Contact: React.FC<ContactProps> = ({
+    selectedService,
+    setSelectedService,
+}) => {
     const [isLoading, setIsLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState<{
         type: 'success' | 'error';
         message: string;
     } | null>(null);
+
     const formRef = useRef<HTMLFormElement>(null);
     const [form, setForm] = useState({
         name: '',
         email: '',
         message: '',
+        service: '',
     });
 
     useEffect(() => {
@@ -46,6 +57,7 @@ const Contact = () => {
                     reply_to: form.email,
                     to_email: 'yacineddev@gmail.com',
                     message: form.message,
+                    selected_service: form.service,
                 },
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
             );
@@ -59,6 +71,7 @@ const Contact = () => {
                 name: '',
                 email: '',
                 message: '',
+                service: '',
             });
         } catch (error) {
             console.log(error);
@@ -113,6 +126,13 @@ const Contact = () => {
                                 onChange={handleChange}
                                 required
                                 className="input-text"
+                            />
+                        </label>
+                        <label htmlFor="service" className="space-y-3">
+                            <span className="field-label">Service</span>
+                            <SelectComponent
+                                selectedService={selectedService}
+                                setSelectedService={setSelectedService}
                             />
                         </label>
                         <label htmlFor="message" className="space-y-3">
