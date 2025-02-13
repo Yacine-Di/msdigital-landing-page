@@ -42,17 +42,34 @@ const Contact: React.FC<ContactProps> = ({
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
+    const checkIfServiceIsSelected = (): boolean => {
+        if (!form.service) {
+            setStatusMessage({
+                type: 'error',
+                message: 'Veuillez sélectionner un service.',
+            });
+            setIsLoading(false);
+            return false;
+        }
+        return true;
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
         setStatusMessage(null);
+
+        if (!checkIfServiceIsSelected()) {
+            setIsLoading(false);
+            return;
+        }
 
         try {
             await emailjs.send(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
                 process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
                 {
-                    form_name: form.name,
+                    from_name: form.name,
                     to_name: 'MSDigital',
                     reply_to: form.email,
                     to_email: 'yacineddev@gmail.com',
@@ -133,6 +150,9 @@ const Contact: React.FC<ContactProps> = ({
                             <SelectComponent
                                 selectedService={selectedService}
                                 setSelectedService={setSelectedService}
+                                setFormService={(service: string) =>
+                                    setForm({ ...form, service })
+                                }
                             />
                         </label>
                         <label htmlFor="message" className="space-y-3">

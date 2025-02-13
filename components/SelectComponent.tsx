@@ -1,18 +1,27 @@
 import { useState } from 'react';
 import { servicesItems } from '@/utils/constants';
 
-const SelectComponent = ({
+interface SelectComponentProps {
+    selectedService: string | null;
+    setSelectedService: (service: string) => void;
+    setFormService: (service: string) => void;
+}
+
+const SelectComponent: React.FC<SelectComponentProps> = ({
     selectedService,
     setSelectedService,
+    setFormService,
 }: {
     selectedService: string | null;
     setSelectedService: (service: string) => void;
+    setFormService: (service: string) => void;
 }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     // Gère le clic sur un service
     const handleSelect = (service: string) => {
         setSelectedService(service);
+        setFormService(service);
         setIsOpen(false);
     };
 
@@ -34,14 +43,14 @@ const SelectComponent = ({
             </div>
 
             <ul
-                className="absolute top-full left-0 mt-2 w-full bg-white border rounded-md shadow-md transform origin-top scale-y-0 transition-transform duration-300 ease-in-out"
+                className="absolute top-full left-0 w-full bg-white border rounded-lg shadow-md transform origin-top scale-y-0 transition-transform duration-300 ease-in-out"
                 style={{ transform: isOpen ? 'scaleY(1)' : 'scaleY(0)' }}
             >
                 {servicesItems.map((service) => (
                     <li
                         key={service.id}
                         onClick={() => handleSelect(service.type)}
-                        className="input-text cursor-pointer hover:bg-gray-100"
+                        className="input-text cursor-pointer hover:bg-gray-100 flex items-center"
                     >
                         {service.title}
                     </li>
