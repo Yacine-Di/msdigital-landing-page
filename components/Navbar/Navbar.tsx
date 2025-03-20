@@ -1,19 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import logo from '../../assets/logo.png';
 import { navLinks } from '../../utils/constants';
 import styles from './Navbar.module.css';
 import { useState } from 'react';
 
 const NavItems = ({ onClick }: { onClick?: () => void }) => {
     return (
-        <ul className="flex flex-col md:flex-row md:text-lg text-xl md:gap-5 ">
+        <ul className="flex flex-col md:flex-row lg:text-xl text-base md:gap-5 ">
             {navLinks.map(({ id, name, href }) => (
-                <li
-                    key={id}
-                    className="max-md:hover:bg-menu hover:text-white py-2 rounded-md"
-                >
+                <li key={id} className="hover:text-gray-500 p-2 rounded-md">
                     <a href={href} onClick={onClick}>
                         {name}
                     </a>
@@ -30,9 +26,15 @@ const Navbar = () => {
     const closeMenu = () => setIsOpen(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-alternate max-w-full">
-            <div className=" w-screen flex justify-between items-center h-16 md:h-20 md:px-10 px-5 font-lato max-md:border-2 border-b-dark">
-                <Image src={logo} alt="logo" width={60} height={80} />
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white max-w-full">
+            <div className=" w-screen flex justify-between items-center h-16 md:h-20 lg:px-10 px-5 font-lato max-md:border-2 border-b-black">
+                <Image
+                    src="/assets/smdesign-black.png"
+                    alt="logo"
+                    width={80}
+                    height={80}
+                    className="md:w-[70px] md:h-[70px] w-[40px] h-[40px]"
+                />
                 <input
                     type="checkbox"
                     role="button"

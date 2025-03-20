@@ -15,7 +15,11 @@ body {
 
 @layer utilities {
     .featured-check {
-        @apply before:content-[''] before:block before:mr-2 before:bg-cover before:w-6 before:h-6 before:bg-[url('/assets/check.svg')] before:bg-no-repeat;
+        @apply before:content-[''] before:block before:mr-2 before:bg-cover before:w-3 before:h-3 before:bg-[url('/assets/check.svg')] before:bg-no-repeat;
+    }
+
+    .featured-cross {
+        @apply before:content-[''] before:block before:mr-2 before:bg-cover before:w-3 before:h-3 before:bg-[url('/assets/red-cross.svg')] before:bg-no-repeat;
     }
 
     .field-label {

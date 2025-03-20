@@ -104,7 +104,7 @@ const Contact: React.FC<ContactProps> = ({
 
     return (
         <section
-            className="bg-alternate p-5 scroll-mt-16 md:scroll-mt-20"
+            className="bg-gradient-to-b from-white to-black p-5 scroll-mt-16 md:scroll-mt-20"
             id="contact"
         >
             <div className="max-w-xl mx-auto">
@@ -169,7 +169,7 @@ const Contact: React.FC<ContactProps> = ({
                         </label>
                         <button
                             type="submit"
-                            className="w-full flex items-center justify-center font-lato font-bold text-lg text-white px-5 py-2 gap-3 mx-auto min-h-12 text-center bg-secondary hover:bg-secondary-hover rounded-lg"
+                            className="w-full flex items-center justify-center font-lato font-bold text-lg text-white px-5 py-2 gap-3 mx-auto min-h-12 text-center bg-blue-500 hover:bg-blue-400 rounded-lg"
                             disabled={isLoading}
                         >
                             {isLoading ? 'Envoi en cours...' : 'Envoyer'}

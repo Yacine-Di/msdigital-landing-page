@@ -10,18 +10,11 @@ const Footer = () => {
             </div>
             <div className="flex justify-center space-x-4 mt-4 lg:basis-1/3">
                 <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/smdesign76_84/"
                     target="_blank"
                     className="social-icon"
                 >
                     <img src="/assets/instagram.svg" alt="instagram-icon" />
-                </a>
-                <a
-                    href="https://youtube.com"
-                    target="_blank"
-                    className="social-icon"
-                >
-                    <img src="/assets/youtube.svg" alt="youtube-icon" />
                 </a>
             </div>
 

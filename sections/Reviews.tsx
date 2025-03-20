@@ -11,10 +11,10 @@ const Reviews = () => {
 
     return (
         <section
-            className="p-5 bg-gray-100 text-center scroll-mt-16 md:scroll-mt-20"
+            className="p-5 bg-gradient-to-b from-neutral-500 to-white text-center scroll-mt-16 md:scroll-mt-20"
             id="reviews"
         >
-            <h2 className="text-4xl font-lato font-bold py-2">
+            <h2 className="text-4xl text-white font-lato font-bold py-2">
                 Ils m'ont fait confiance
             </h2>
             {isClient ? (
@@ -38,7 +38,7 @@ const Reviews = () => {
                         }) => (
                             <motion.div
                                 key={id}
-                                className="max-w-md w-full md:w-1/2 p-4 bg-white shadow-md rounded-lg"
+                                className="max-w-md w-full md:w-1/2 p-4 bg-white shadow-lg rounded-lg"
                                 variants={fadeInUp}
                             >
                                 <Image

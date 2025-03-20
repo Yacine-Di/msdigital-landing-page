@@ -37,7 +37,7 @@ export const navLinks = [
 ];
 
 export const expertiseSubtitle =
-    " Votre restaurant n'a pas de design moderne ? Il est temps de propulser son image. Avec des photos attrayantes, des vidéos captivantes et des menus actualisés, vous offrirez à vos clients une expérience qui met en valeur l'ambiance et la qualité de vos plats.";
+    " Votre restaurant n'a pas de design moderne ? Il est temps de propulser son image. Avec des photos attrayantes, des vidéos captivantes et des menus actualisés, vous offrirez à vos clients une expérience qui met en valeur la qualité de vos plats.";
 
 export const expertiseItems = [
     {
@@ -68,51 +68,63 @@ export const servicesItems = [
         id: 1,
         title: 'Starter',
         type: 'starter',
-        price: 'À partir de 499€',
+        price: 'À partir de 590€/mois',
         description:
             'Idéal pour poser les bases et captiver vos clients avec des visuels soignés.',
-        features: [
+        available: [
             '5 photos culinaires professionnelles',
+            '1 Vidéo courte (15-30 sec)',
+            '4 posts réseaux sociaux',
             'Retouches incluses',
             'Formats optimisés pour les réseaux sociaux',
-            'Livraison rapide sous 5 jours',
             'Conseils basiques pour la mise en avant sur Instagram',
+        ],
+        unavailable: [
+            'Stories Instagram / Facebook',
+            'Rapport et analyse de performances',
+            'Réponses aux commentaires et messages privés',
         ],
     },
     {
         id: 2,
-        title: 'Avancé',
-        type: 'advanced',
-        price: 'À partir de 1199€',
+        title: 'Classique',
+        type: 'classic',
+        price: 'À partir de 1190€',
         description:
             'Un pack complet pour attirer plus de clients et valoriser votre restaurant.',
-        features: [
+        available: [
             '10 photos culinaires professionnelles',
-            '1 vidéo promotionnelle (30 secondes)',
+            '2 Vidéos courtes (15-30 sec)',
+            '4 posts réseaux sociaux',
+            '2 stories réseaux sociaux par semaine',
             'Retouches incluses',
-            'Livraison sous 2 semaines',
-            'Création de posts et stories prêts à publier',
-            'Mini-guide pour booster l’engagement sur vos réseaux',
+            'Formats optimisés pour les réseaux sociaux',
+            'Conseils basiques pour la mise en avant sur Instagram',
+            'Réponses aux commentaires et messages privés',
         ],
+        unavailable: ['Rapport et analyse de performances'],
     },
     {
         id: 3,
         title: 'Premium',
         type: 'premium',
-        price: 'À partir de 1999€',
+        price: 'À partir de 2390€',
         description:
-            'La solution parfaite pour améliorer votre image et fidéliser vos clients.',
-        features: [
-            '25 photos culinaires professionnelles.',
-            '1 vidéo immersive (1 minute).',
-            'Refonte complète de votre menu.',
-            'Refonte de menus (design inclus)',
-            'Déplacement sur site',
-            'Livraison sous 3 semaines',
-            'Création d’un mini-clip pour vos campagnes publicitaires',
-            'Conseils en branding pour améliorer votre image de marque',
-            'Planification d’un calendrier de publication pour vos réseaux sociaux',
+            'La solution parfaite pour booster et améliorer votre image et fidéliser vos clients.',
+        available: [
+            '20 photos culinaires professionnelles',
+            '2 Vidéos courtes (~ 15-30 sec)',
+            '1 Vidéo longue (~ 60 sec)',
+            '8 posts réseaux sociaux',
+            '3 stories réseaux sociaux par semaine',
+            'Retouches incluses',
+            'Formats optimisés pour les réseaux sociaux',
+            'Plan stratégique personnalisé et publications professionnelles',
+            'Réponses aux commentaires et messages privés, ',
+            'Mise en avant des abonnés',
+            'Rapport et analyse de performances',
         ],
+        unavailable: [],
     },
     {
         id: 4,
@@ -121,13 +133,21 @@ export const servicesItems = [
         price: 'Tarif personnalisé',
         description:
             'Des solutions créatives et adaptées pour répondre à vos besoins spécifiques.',
-        features: [
+        available: [
             'Photographie et vidéo personnalisées.',
             'Conception de campagnes uniques.',
             'Création de contenus sur demande.',
         ],
+        unavailable: [],
     },
 ];
+
+export const aboutItems = {
+    description:
+        'Je suis MSDigital, expert en montage vidéo et photo depuis plus de 6 ans. J’ai eu l’opportunité de collaborer avec des YouTubeurs connus, ainsi que des restaurants et snacks, ce qui m’a permis d’affiner mon regard et mon expertise dans la mise en valeur des marques et des plats. Au-delà de mon métier, je suis passionné par la peinture, une discipline qui nourrit ma créativité et m’inspire au quotidien pour créer du contenu percutant et esthétique.',
+    callToAction:
+        'Transformons ensemble votre image en une véritable vitrine digitale !',
+};
 
 export const reviewItems = [
     {
@@ -162,7 +182,7 @@ export const reviewItems = [
     },
     {
         id: 4,
-        restaurantName: 'Gold Beef',
+        restaurantName: 'Oz Grill',
         text: 'lorem epsLorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestias quaerat soluta excepturi rem totam id cupiditate atque suscipit? Aperiam necessitatibus facere commodi, voluptatum error tenetur illo libero nam earum.',
         rating: 5,
         image: '/assets/goldbeef.jpg',

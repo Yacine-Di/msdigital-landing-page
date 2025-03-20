@@ -1,14 +1,14 @@
 'use client';
 
-import Image from 'next/image';
-import logo from '../assets/logo.png';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/utils/animations';
+import { aboutItems } from '@/utils/constants';
+import CtaButton from '@/components/CtaButton';
 
 const About = () => {
     return (
         <section
-            className="bg-default p-5 scroll-mt-16 md:scroll-mt-20"
+            className="bg-gradient-to-b from-neutral-900 to-neutral-500 p-8 scroll-mt-16 md:scroll-mt-20"
             id="about"
         >
             <motion.div
@@ -16,27 +16,31 @@ const About = () => {
                 initial="initial"
                 whileInView="whileInView"
                 viewport={{ once: true, amount: 0.5 }}
-                className="max-w-7xl mx-auto md:block"
+                className="max-w-6xl mx-auto"
             >
-                <p className="text-center font-lato font-bold text-text-secondary text-4xl py-2">
-                    Qui suis-je ?
-                </p>
-                <div className=" flex flex-col md:flex-row justify-between">
-                    <Image
-                        src={logo}
-                        alt="logo"
-                        width={300}
-                        height={300}
-                        className="h-[300px] w-[300px] p-2 my-2 mx-auto object-cover"
-                    />
-                    <p className="font-lato text-2xl md:basis-1/2 my-auto">
-                        Je suis MSDigital, je fais du montage vidéo et photo
-                        depuis plus de 6 ans. J’ai travaillé avec des YouTubeurs
-                        connus, des restaurants et des snacks, ce qui m’a permis
-                        d’acquérir une solide expérience. En dehors de mon
-                        activité, j’aime peindre, une passion qui nourrit ma
-                        créativité au quotidien.
-                    </p>
+                <h2 className="text-center font-bold text-white text-4xl mb-6">
+                    À propos
+                </h2>
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                    <div className="basis-1/2">
+                        <h3 className="text-center font-bold text-white text-2xl mb-4">
+                            Qui suis-je ?
+                        </h3>
+                        <div className="flex flex-col items-center gap-8">
+                            {/* Description */}
+                            <p className=" text-lg md:text-xl text-white leading-relaxed">
+                                {aboutItems.description}
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Call to action + bouton */}
+                    <div className="basis-1/2 flex flex-col items-center text-center md:text-right gap-4">
+                        <p className=" text-xl text-center font-semibold text-white">
+                            {aboutItems.callToAction}
+                        </p>
+                        <CtaButton />
+                    </div>
                 </div>
             </motion.div>
         </section>
