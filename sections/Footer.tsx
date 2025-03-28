@@ -2,8 +2,8 @@ const Footer = () => {
     return (
         <footer className="bg-footer text-white py-6 px-2 text-center lg:flex lg:justify-between">
             <div className="lg:basis-1/3">
-                <h2 className="text-xl font-lato font-bold">MSDigital</h2>
-                <p className="font-lato">
+                <h2 className="text-xl font-graphik font-bold">MSDesign</h2>
+                <p className="font-graphik">
                     Boostez l'image de votre restaurant avec des visuels
                     impactants !
                 </p>
@@ -18,8 +18,8 @@ const Footer = () => {
                 </a>
             </div>
 
-            <p className="text-white font-lato text-sm mt-4 lg:basis-1/3">
-                © 2025 MSDigital. Tous droits réservés.
+            <p className="text-white font-graphik text-sm mt-4 lg:basis-1/3">
+                © 2025 MSDesign. Tous droits réservés.
             </p>
         </footer>
     );

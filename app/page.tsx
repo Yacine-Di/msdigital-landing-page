@@ -9,6 +9,7 @@ import Reviews from '@/sections/Reviews';
 import Contact from '@/sections/Contact';
 import Footer from '@/sections/Footer';
 import { useState } from 'react';
+
 export default function Home() {
     const [selectedService, setSelectedService] = useState<string | null>(null);
 

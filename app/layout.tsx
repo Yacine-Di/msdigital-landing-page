@@ -2,76 +2,35 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 
-const loto = localFont({
+const graphik = localFont({
     src: [
         {
-            path: './fonts/Lato-Black.ttf',
-            weight: '900',
-            style: 'normal',
-        },
-        {
-            path: './fonts/Lato-Bold.ttf',
-            weight: '800',
-            style: 'normal',
-        },
-        {
-            path: './fonts/Lato-Regular.ttf',
+            path: './fonts/Graphik-Regular-Trial.otf',
             weight: '400',
             style: 'normal',
         },
         {
-            path: './fonts/Lato-Thin.ttf',
-            weight: '300',
-            style: 'normal',
-        },
-        {
-            path: './fonts/Lato-Light.ttf',
-            weight: '200',
-            style: 'normal',
-        },
-    ],
-    variable: '--font-lato',
-});
-
-const playfairDisplay = localFont({
-    src: [
-        {
-            path: './fonts/PlayfairDisplay-Black.ttf',
-            weight: '900',
-            style: 'normal',
-        },
-        {
-            path: './fonts/PlayfairDisplay-ExtraBold.ttf',
-            weight: '800',
-            style: 'normal',
-        },
-        {
-            path: './fonts/PlayfairDisplay-Bold.ttf',
-            weight: '700',
-            style: 'normal',
-        },
-        {
-            path: './fonts/PlayfairDisplay-SemiBold.ttf',
-            weight: '600',
-            style: 'normal',
-        },
-        {
-            path: './fonts/PlayfairDisplay-Medium.ttf',
+            path: './fonts/Graphik-Medium-Trial.otf',
             weight: '500',
             style: 'normal',
         },
         {
-            path: './fonts/PlayfairDisplay-Regular.ttf',
-            weight: '400',
+            path: './fonts/Graphik-Semibold-Trial.otf',
+            weight: '600',
+            style: 'normal',
+        },
+        {
+            path: './fonts/Graphik-Bold-Trial.otf',
+            weight: '700',
             style: 'normal',
         },
     ],
-    variable: '--font-playfair',
+    variable: '--font-graphik',
 });
 
 export const metadata: Metadata = {
-    title: 'Ahmed Design',
-    description: 'Boosteur de commerce',
+    title: 'SMDesign',
+    description: 'Booster de restaurant Halal',
 };
 
 export default function RootLayout({
@@ -81,9 +40,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`${loto.variable} ${playfairDisplay.variable} antialiased`}
-            >
+            <body className={`${graphik.variable} antialiased`}>
                 {children}
             </body>
         </html>

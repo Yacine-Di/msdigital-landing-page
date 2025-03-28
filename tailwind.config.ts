@@ -33,8 +33,7 @@ export default {
                 footer: '#000', // Brun chocolat (fond du footer)
             },
             fontFamily: {
-                lato: ['var(--font-lato)'],
-                playfair: ['var(--font-playfair)'],
+                graphik: ['var(--font-graphik)'],
             },
             borderColor: {
                 card: '#007BFF ',

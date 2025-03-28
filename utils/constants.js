@@ -29,11 +29,6 @@ export const navLinks = [
         name: 'Contact',
         href: '#contact',
     },
-    {
-        id: 7,
-        name: 'FAQ',
-        href: '#faq',
-    },
 ];
 
 export const expertiseSubtitle =
@@ -68,7 +63,7 @@ export const servicesItems = [
         id: 1,
         title: 'Starter',
         type: 'starter',
-        price: 'À partir de 590€/mois',
+        price: '590€',
         description:
             'Idéal pour poser les bases et captiver vos clients avec des visuels soignés.',
         available: [
@@ -77,10 +72,10 @@ export const servicesItems = [
             '4 posts réseaux sociaux',
             'Retouches incluses',
             'Formats optimisés pour les réseaux sociaux',
-            'Conseils basiques pour la mise en avant sur Instagram',
+            'Conseils basiques pour la mise en avant sur  pour les réseaux sociaux',
         ],
         unavailable: [
-            'Stories Instagram / Facebook',
+            '2 stories réseaux sociaux par semaine',
             'Rapport et analyse de performances',
             'Réponses aux commentaires et messages privés',
         ],
@@ -89,17 +84,18 @@ export const servicesItems = [
         id: 2,
         title: 'Classique',
         type: 'classic',
-        price: 'À partir de 1190€',
+        price: '1190€',
         description:
             'Un pack complet pour attirer plus de clients et valoriser votre restaurant.',
         available: [
             '10 photos culinaires professionnelles',
             '2 Vidéos courtes (15-30 sec)',
             '4 posts réseaux sociaux',
-            '2 stories réseaux sociaux par semaine',
             'Retouches incluses',
             'Formats optimisés pour les réseaux sociaux',
-            'Conseils basiques pour la mise en avant sur Instagram',
+
+            '2 stories réseaux sociaux par semaine',
+            'Conseils avancés pour la mise en avant sur  pour les réseaux sociaux',
             'Réponses aux commentaires et messages privés',
         ],
         unavailable: ['Rapport et analyse de performances'],
@@ -108,7 +104,7 @@ export const servicesItems = [
         id: 3,
         title: 'Premium',
         type: 'premium',
-        price: 'À partir de 2390€',
+        price: '2390€',
         description:
             'La solution parfaite pour booster et améliorer votre image et fidéliser vos clients.',
         available: [
@@ -130,7 +126,7 @@ export const servicesItems = [
         id: 4,
         title: 'Sur mesure',
         type: 'custom',
-        price: 'Tarif personnalisé',
+        price: 'Tarif perso',
         description:
             'Des solutions créatives et adaptées pour répondre à vos besoins spécifiques.',
         available: [
@@ -144,7 +140,7 @@ export const servicesItems = [
 
 export const aboutItems = {
     description:
-        'Je suis MSDigital, expert en montage vidéo et photo depuis plus de 6 ans. J’ai eu l’opportunité de collaborer avec des YouTubeurs connus, ainsi que des restaurants et snacks, ce qui m’a permis d’affiner mon regard et mon expertise dans la mise en valeur des marques et des plats. Au-delà de mon métier, je suis passionné par la peinture, une discipline qui nourrit ma créativité et m’inspire au quotidien pour créer du contenu percutant et esthétique.',
+        'Je suis MSDesign, expert en montage vidéo et photo depuis plus de 6 ans. J’ai eu l’opportunité de collaborer avec des YouTubeurs connus, ainsi que des restaurants et snacks, ce qui m’a permis d’affiner mon regard et mon expertise dans la mise en valeur des marques et des plats. Au-delà de mon métier, je suis passionné par la peinture, une discipline qui nourrit ma créativité et m’inspire au quotidien pour créer du contenu percutant et esthétique.',
     callToAction:
         'Transformons ensemble votre image en une véritable vitrine digitale !',
 };
@@ -153,41 +149,51 @@ export const reviewItems = [
     {
         id: 1,
         restaurantName: 'Hom Resto',
-        text: 'lorem epsLorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestias quaerat soluta excepturi rem totam id cupiditate atque suscipit? Aperiam necessitatibus facere commodi, voluptatum error tenetur illo libero nam earum.',
+        text: 'Un rendu incroyable ! Les photos et vidéos subliment nos plats et donnent vraiment envie. Super réactif, à l’écoute et toujours prêt à ajuster pour un résultat parfait. Une collaboration au top, à refaire sans hésiter !',
         rating: 5,
         image: '/assets/homresto.png',
         location: 'Rouen, France',
-        serviceProvided: '',
-        date: '01-01-2025',
+        serviceProvided: 'Sur mesure',
+        date: '11/2024',
     },
     {
         id: 2,
-        restaurantName: 'Gold Beef',
-        text: 'lorem epsLorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestias quaerat soluta excepturi rem totam id cupiditate atque suscipit? Aperiam necessitatibus facere commodi, voluptatum error tenetur illo libero nam earum.',
-        rating: 5,
-        image: '/assets/goldbeef.jpg',
-        location: 'Rouen, France',
-        serviceProvided: '',
-        date: '01-01-2025',
-    },
-    {
-        id: 3,
         restaurantName: 'Smashed',
         text: 'Encore une fois parfait, on est écouté et conseillé du début à la fin et il n’hésite pas à faire des retouches jusqu’à ce que le résultat soit parfait ! Pas la première ni la dernière collaboration !',
         rating: 5,
         image: '/assets/smashed.png',
         location: 'Rouen, France',
         serviceProvided: 'Sur mesure',
-        date: '01-01-2025',
+        date: '02/2025',
+    },
+    {
+        id: 3,
+        restaurantName: 'Oz Grill',
+        text: 'Service impeccable ! On sent l’expérience et la passion dans chaque prise de vue. Les retouches sont soignées, et le rendu final dépasse nos attentes. Merci encore, on retravaillera ensemble sans hésiter !',
+        rating: 5,
+        image: '/assets/ozgrill.png',
+        location: 'Rouen, France',
+        serviceProvided: 'Classique',
+        date: '02/2025',
     },
     {
         id: 4,
-        restaurantName: 'Oz Grill',
-        text: 'lorem epsLorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestias quaerat soluta excepturi rem totam id cupiditate atque suscipit? Aperiam necessitatibus facere commodi, voluptatum error tenetur illo libero nam earum.',
+        restaurantName: 'Oz Food',
+        text: 'Rien à redire, c’est du haut niveau ! De la prise de brief à la livraison du contenu, tout est fluide et efficace. Nos clients adorent les visuels, et nos réseaux ont gagné en engagement. Une vraie valeur ajoutée !',
+        rating: 5,
+        image: '/assets/ozfood.png',
+        location: 'Rouen, France',
+        serviceProvided: 'Classique',
+        date: '03/2025',
+    },
+    {
+        id: 5,
+        restaurantName: 'Gold Beef',
+        text: 'Un travail exceptionnel ! Les photos et vidéos mettent parfaitement en valeur nos plats, et le contenu pour les réseaux sociaux a boosté notre visibilité. Toujours à l’écoute et ultra pro, on recommande à 100% !',
         rating: 5,
         image: '/assets/goldbeef.jpg',
         location: 'Rouen, France',
-        serviceProvided: '',
-        date: '01-01-2025',
+        serviceProvided: 'Sur mesure',
+        date: '01/2025',
     },
 ];

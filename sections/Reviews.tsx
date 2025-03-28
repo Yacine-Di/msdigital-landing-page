@@ -14,7 +14,7 @@ const Reviews = () => {
             className="p-5 bg-gradient-to-b from-neutral-500 to-white text-center scroll-mt-16 md:scroll-mt-20"
             id="reviews"
         >
-            <h2 className="text-4xl text-white font-lato font-bold py-2">
+            <h2 className="text-4xl text-white font-graphik font-bold py-2">
                 Ils m'ont fait confiance
             </h2>
             {isClient ? (
@@ -22,7 +22,7 @@ const Reviews = () => {
                     className="max-w-7xl mx-auto my-2 p-2 flex flex-wrap justify-around gap-6"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     variants={staggered}
                 >
                     {reviewItems.map(

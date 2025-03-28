@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white max-w-full">
-            <div className=" w-screen flex justify-between items-center h-16 md:h-20 lg:px-10 px-5 font-lato max-md:border-2 border-b-black">
+            <div className=" w-screen flex justify-between items-center h-16 md:h-20 lg:px-10 px-5 font-graphik max-md:border-2 border-b-black">
                 <Image
                     src="/assets/smdesign-black.png"
                     alt="logo"
