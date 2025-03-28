@@ -2,7 +2,7 @@ import CtaButton from '@/components/CtaButton';
 
 const Hero = () => {
     return (
-        <section className="mx-auto min-h-screen pt-16 md:pt-20 flex" id="home">
+        <section className="mx-auto max-h-screen pt-16 md:pt-20 flex" id="home">
             <div className=" relative">
                 <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
                 <video
@@ -10,7 +10,7 @@ const Hero = () => {
                     loop
                     muted
                     typeof="video/mp4"
-                    className="object-cover h-screen w-screen"
+                    className="object-cover h-full w-screen"
                     autoPlay
                 />
                 <div className="w-full h-full top-0 flex flex-col p-5 justify-center items-center absolute">

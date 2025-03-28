@@ -3,7 +3,7 @@ const CtaButton = () => {
         <>
             <a
                 href="#services"
-                className=" min-w-[200px] mt-8 p-5 text-center bg-blue-500 hover:bg-blue-400 rounded-lg"
+                className=" min-w-[200px] mt-8 p-5 text-lg text-center bg-blue-600 hover:bg-blue-600/80 rounded-lg"
             >
                 <button className="text-white font-bold">Commencer</button>
             </a>
