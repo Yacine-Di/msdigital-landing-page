@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <footer className="bg-footer text-white py-6 px-2 text-center lg:flex lg:justify-between">
             <div className="lg:basis-1/3">
-                <h2 className="text-xl font-graphik font-bold">MSDesign</h2>
+                <h2 className="text-xl font-graphik font-bold">SMDesign</h2>
                 <p className="font-graphik">
                     Boostez l'image de votre restaurant avec des visuels
                     impactants !
@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
 
             <p className="text-white font-graphik text-sm mt-4 lg:basis-1/3">
-                © 2025 MSDesign. Tous droits réservés.
+                © 2025 SMDesign. Tous droits réservés.
             </p>
         </footer>
     );

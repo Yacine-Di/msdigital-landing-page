@@ -39,23 +39,32 @@ export const expertiseItems = [
         id: 1,
         icon: '/assets/photo.svg',
         alt: 'photo-icon',
-        title: 'Des photos et vidéos engageantes pour valoriser vos plats.',
-        text: 'Je mets en valeur vos plats avec des concepts originaux et des rendus vidéos et photos de qualité.',
+        title: 'Des photos et vidéos attractives pour sublimer vos plats',
+        text: 'Je mets en valeur vos plats avec des concepts originaux et des rendus vidéos et photos de qualité',
     },
     {
         id: 2,
         icon: '/assets/handshake.svg',
         alt: 'handshake-icon',
-        title: 'Un processus collaboratif pour des résultats sur mesure.',
+        title: 'Un processus collaboratif pour des résultats sur mesure',
         text: "J'échange avec vous pour comprendre vos besoins puis je conçois des visuels percutants qui mettent en valeur votre identité",
     },
     {
         id: 3,
         icon: '/assets/map.svg',
         alt: 'map-icon',
-        title: 'Un déplacement sur site pour un service unique.',
+        title: 'Un déplacement sur site pour un service unique',
         text: 'Je me déplace dans votre restaurant pour mettre en valeur vos produits pour produire une solution unique',
     },
+];
+
+export const photosExample = [
+    '/photosExample/photo-1.jpg',
+    '/photosExample/photo-2.jpg',
+    '/photosExample/photo-3.jpeg',
+    '/photosExample/photo-4.jpeg',
+    '/photosExample/photo-5.jpeg',
+    '/photosExample/photo-6.jpeg',
 ];
 
 export const servicesItems = [
@@ -140,7 +149,7 @@ export const servicesItems = [
 
 export const aboutItems = {
     description:
-        'Je suis MSDesign, expert en montage vidéo et photo depuis plus de 6 ans. J’ai eu l’opportunité de collaborer avec des YouTubeurs connus, ainsi que des restaurants et snacks, ce qui m’a permis d’affiner mon regard et mon expertise dans la mise en valeur des marques et des plats. Au-delà de mon métier, je suis passionné par la peinture, une discipline qui nourrit ma créativité et m’inspire au quotidien pour créer du contenu percutant et esthétique.',
+        'Je suis SMDesign, expert en montage vidéo et photo depuis plus de 6 ans. J’ai eu l’opportunité de collaborer avec des YouTubeurs connus, ainsi que des restaurants et snacks, ce qui m’a permis d’affiner mon regard et mon expertise dans la mise en valeur des marques et des plats. Au-delà de mon métier, je suis passionné par la peinture, une discipline qui nourrit ma créativité et m’inspire au quotidien pour créer du contenu percutant et esthétique.',
     callToAction:
         'Transformons ensemble votre image en une véritable vitrine digitale !',
 };
