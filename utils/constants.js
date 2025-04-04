@@ -59,12 +59,24 @@ export const expertiseItems = [
 ];
 
 export const photosExample = [
-    '/photosExample/photo-1.jpg',
-    '/photosExample/photo-2.jpg',
-    '/photosExample/photo-3.jpeg',
-    '/photosExample/photo-4.jpeg',
-    '/photosExample/photo-5.jpeg',
-    '/photosExample/photo-6.jpeg',
+    [
+        '/photosExample/photo-1.jpg',
+        '/photosExample/photo-2.jpg',
+        '/photosExample/photo-3.jpg',
+        '/photosExample/photo-4.jpg',
+        '/photosExample/photo-5.jpg',
+        '/photosExample/photo-6.jpg',
+        '/photosExample/photo-7.jpg',
+    ],
+    [
+        '/photosExample/photo-8.jpg',
+        '/photosExample/photo-9.jpg',
+        '/photosExample/photo-10.jpg',
+        '/photosExample/photo-11.jpg',
+        '/photosExample/photo-12.jpg',
+        '/photosExample/photo-13.jpg',
+        '/photosExample/photo-14.jpg',
+    ],
 ];
 
 export const servicesItems = [

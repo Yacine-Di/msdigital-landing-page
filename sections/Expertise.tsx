@@ -1,17 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import {
-    expertiseItems,
-    expertiseSubtitle,
-    photosExample,
-} from '../utils/constants';
-import { animate, motion, useMotionValue } from 'framer-motion';
+import { expertiseItems, expertiseSubtitle } from '../utils/constants';
+import { motion } from 'framer-motion';
 import { fadeInUp, staggered } from '@/utils/animations';
 import useIsClient from '@/utils/hooks';
-import PhotoCard from '@/components/PhotoCard';
-import useMeasure from 'react-use-measure';
-import { useEffect, useState } from 'react';
+import ScrollingCarousel from '@/components/ScrollingCarousel';
+import { photosExample } from '../utils/constants';
 
 const ExpertiseItems = () => {
     return expertiseItems.map(({ id, icon, alt, title, text }) => (
@@ -35,45 +30,6 @@ const ExpertiseItems = () => {
 
 const Expertise = () => {
     const isClient = useIsClient();
-    const [ref, { width }] = useMeasure();
-    const XTranslation = useMotionValue(0);
-    const FAST_DURATION = 25;
-    const SLOW_DURATION = 75;
-    const [duration, setDuration] = useState(FAST_DURATION);
-
-    const [mustFinish, setMustFinish] = useState(false);
-    const [rerender, setRerender] = useState(false);
-
-    useEffect(() => {
-        let controls;
-        const finalPosition = -width / 2 - 8;
-
-        if (mustFinish) {
-            controls = animate(
-                XTranslation,
-                [XTranslation.get(), finalPosition],
-                {
-                    ease: 'linear',
-                    duration:
-                        duration * (1 - XTranslation.get() / finalPosition),
-                    onComplete: () => {
-                        setMustFinish(false);
-                        setRerender(!rerender);
-                    },
-                },
-            );
-        } else {
-            controls = animate(XTranslation, [0, finalPosition], {
-                ease: 'linear',
-                duration: duration,
-                repeat: Infinity,
-                repeatType: 'loop',
-                repeatDelay: 0,
-            });
-        }
-
-        return controls?.stop;
-    }, [XTranslation, width, duration, mustFinish, rerender]);
 
     return (
         <section
@@ -101,26 +57,16 @@ const Expertise = () => {
                     </div>
                 )}
             </div>
-            <div className="relative w-full overflow-hidden py-10">
-                <motion.div
-                    className="flex gap-4 w-max"
-                    ref={ref}
-                    style={{ x: XTranslation }}
-                    onHoverStart={() => {
-                        setMustFinish(true);
-                        setDuration(SLOW_DURATION);
-                    }}
-                    onHoverEnd={() => {
-                        setMustFinish(true);
-                        setDuration(FAST_DURATION);
-                    }}
-                >
-                    {[...photosExample, ...photosExample].map(
-                        (photo, index) => (
-                            <PhotoCard key={index} image={photo} />
-                        ),
-                    )}
-                </motion.div>
+            <div>
+                <ScrollingCarousel
+                    direction="ltr"
+                    photosExample={photosExample[0]}
+                />
+
+                <ScrollingCarousel
+                    direction="rtl"
+                    photosExample={photosExample[1]}
+                />
             </div>
         </section>
     );
