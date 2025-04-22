@@ -81,7 +81,7 @@ const Contact: React.FC<ContactProps> = ({
                     from_name: form.name,
                     to_name: 'SMDesign',
                     reply_to: form.email,
-                    to_email: 'yacineddev@gmail.com',
+                    to_email: 'smdesignpro2@gmail.com',
                     message: form.message,
                     selected_service: form.service,
                 },
@@ -134,6 +134,7 @@ const Contact: React.FC<ContactProps> = ({
                             <span className="field-label">Nom ou Société</span>
                             <input
                                 type="text"
+                                id="name"
                                 name="name"
                                 placeholder="Mon restaurant"
                                 value={form.name}
@@ -146,6 +147,7 @@ const Contact: React.FC<ContactProps> = ({
                             <span className="field-label">Email</span>
                             <input
                                 type="email"
+                                id="email"
                                 name="email"
                                 placeholder="monrestaurant@gmail.com"
                                 value={form.email}
@@ -154,7 +156,7 @@ const Contact: React.FC<ContactProps> = ({
                                 className="input-text"
                             />
                         </label>
-                        <label htmlFor="service" className="space-y-3">
+                        <label className="space-y-3">
                             <span className="field-label">Service</span>
                             <SelectComponent
                                 selectedService={selectedService}
@@ -168,6 +170,7 @@ const Contact: React.FC<ContactProps> = ({
                             <span className="field-label">Message</span>
                             <textarea
                                 name="message"
+                                id="message"
                                 placeholder="Ici je fais ma demande au meilleur designer de France"
                                 required
                                 rows={6}

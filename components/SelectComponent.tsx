@@ -11,10 +11,6 @@ const SelectComponent: React.FC<SelectComponentProps> = ({
     selectedService,
     setSelectedService,
     setFormService,
-}: {
-    selectedService: string | null;
-    setSelectedService: (service: string) => void;
-    setFormService: (service: string) => void;
 }) => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -30,6 +26,9 @@ const SelectComponent: React.FC<SelectComponentProps> = ({
             <div
                 onClick={() => setIsOpen(!isOpen)}
                 className="input-text bg-white flex justify-between items-center cursor-pointer"
+                aria-expanded={isOpen}
+                aria-controls="service-options"
+                aria-haspopup="listbox"
             >
                 {selectedService
                     ? servicesItems.find((s) => s.type === selectedService)
@@ -43,12 +42,16 @@ const SelectComponent: React.FC<SelectComponentProps> = ({
             </div>
 
             <ul
+                id="service-options"
+                role="listbox"
                 className="absolute top-full left-0 w-full bg-white border rounded-lg shadow-md transform origin-top scale-y-0 transition-transform duration-300 ease-in-out"
                 style={{ transform: isOpen ? 'scaleY(1)' : 'scaleY(0)' }}
             >
                 {servicesItems.map((service) => (
                     <li
                         key={service.id}
+                        role="option"
+                        aria-selected={selectedService === service.type}
                         onClick={() => handleSelect(service.type)}
                         className="input-text cursor-pointer hover:bg-gray-100 flex items-center"
                     >

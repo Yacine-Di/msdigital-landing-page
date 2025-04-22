@@ -27,14 +27,12 @@ const About = () => {
                             Qui suis-je ?
                         </h3>
                         <div className="flex flex-col items-center gap-8">
-                            {/* Description */}
                             <p className=" text-lg md:text-xl text-white leading-relaxed">
                                 {aboutItems.description}
                             </p>
                         </div>
                     </div>
 
-                    {/* Call to action + bouton */}
                     <div className="basis-1/2 flex flex-col items-center text-center md:text-right gap-4">
                         <p className=" text-xl text-center font-semibold text-white">
                             {aboutItems.callToAction}
