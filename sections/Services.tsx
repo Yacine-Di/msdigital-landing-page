@@ -111,7 +111,7 @@ const Services = ({
                             Services
                         </h2>
                         <motion.div
-                            className="flex flex-col lg:flex-row p-5"
+                            className="flex flex-col lg:flex-row md:p-5"
                             initial="hidden"
                             whileInView="visible"
                             viewport={{

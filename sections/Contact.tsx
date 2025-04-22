@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import SelectComponent from '@/components/SelectComponent';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface ContactProps {
     selectedService: string | null;
@@ -78,7 +79,7 @@ const Contact: React.FC<ContactProps> = ({
                 process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
                 {
                     from_name: form.name,
-                    to_name: 'MSDigital',
+                    to_name: 'SMDesign',
                     reply_to: form.email,
                     to_email: 'yacineddev@gmail.com',
                     message: form.message,
@@ -190,17 +191,23 @@ const Contact: React.FC<ContactProps> = ({
                     </form>
                 </div>
             </div>
-            {statusMessage && (
-                <div
-                    className={`max-w-[90%] whitespace-nowrap fixed bottom-5 left-1/2 transform -translate-x-1/2 px-6 py-3 text-white rounded-lg transition-opacity duration-500 ${
-                        statusMessage.type === 'success'
-                            ? 'bg-green-500'
-                            : 'bg-red-500'
-                    }`}
-                >
-                    {statusMessage.message}
-                </div>
-            )}
+            <AnimatePresence>
+                {statusMessage && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20, x: '-50%' }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 20 }}
+                        transition={{ duration: 0.5 }}
+                        className={`max-w-[90%] whitespace-nowrap fixed bottom-20 md:bottom-40 left-1/2 px-6 py-3 text-white rounded-lg ${
+                            statusMessage.type === 'success'
+                                ? 'bg-green-500'
+                                : 'bg-red-500'
+                        }`}
+                    >
+                        {statusMessage.message}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };
