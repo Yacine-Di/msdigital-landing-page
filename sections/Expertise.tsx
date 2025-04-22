@@ -57,17 +57,15 @@ const Expertise = () => {
                     </div>
                 )}
             </div>
-            <div>
-                <ScrollingCarousel
-                    direction="ltr"
-                    photosExample={photosExample[0]}
-                />
+            <ScrollingCarousel
+                direction="ltr"
+                photosExample={photosExample[0]}
+            />
 
-                <ScrollingCarousel
-                    direction="rtl"
-                    photosExample={photosExample[1]}
-                />
-            </div>
+            <ScrollingCarousel
+                direction="rtl"
+                photosExample={photosExample[1]}
+            />
         </section>
     );
 };

@@ -66,7 +66,7 @@ const ScrollingCarousel: React.FC<ScrollingCarouselProps> = ({
     }, [XTranslation, width, duration, mustFinish, rerender, isLeftToRight]);
 
     return (
-        <div className="relative w-full overflow-hidden py-10">
+        <div className="relative w-full overflow-hidden py-5 md:py-10">
             <motion.div
                 className="flex my-4 gap-4 w-max"
                 ref={ref}
