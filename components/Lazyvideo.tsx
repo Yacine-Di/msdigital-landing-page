@@ -8,7 +8,6 @@ const LazyVideo = () => {
             className="object-cover min-h-[400px] h-full w-screen z-10"
             autoPlay
             preload="none"
-            poster="/assets/poster-hero.png"
         />
     );
 };

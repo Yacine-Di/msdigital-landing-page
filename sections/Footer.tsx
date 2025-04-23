@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const Footer = () => {
     return (
         <footer className="bg-footer text-white py-6 px-2 text-center lg:flex lg:justify-between">
@@ -14,7 +16,12 @@ const Footer = () => {
                     target="_blank"
                     className="social-icon"
                 >
-                    <img src="/assets/instagram.svg" alt="instagram-icon" />
+                    <Image
+                        src="/assets/instagram.svg"
+                        alt="instagram-icon"
+                        width={40}
+                        height={40}
+                    />
                 </a>
             </div>
 
