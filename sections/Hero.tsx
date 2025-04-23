@@ -1,9 +1,5 @@
 import CtaButton from '@/components/CtaButton';
-import dynamic from 'next/dynamic';
-
-const LazyVideo = dynamic(() => import('@/components/Lazyvideo'), {
-    ssr: false,
-});
+import LazyVideo from '@/components/Lazyvideo';
 
 const Hero = () => {
     return (
