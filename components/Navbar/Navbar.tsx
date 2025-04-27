@@ -29,7 +29,7 @@ const Navbar = () => {
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white max-w-full">
             <div className=" w-screen flex justify-between items-center h-16 md:h-20 lg:px-10 px-5 font-roboto max-md:border-2 border-b-black">
-                <a href="#home">
+                <Link href="#home">
                     <Image
                         src="/assets/smdesign-black.png"
                         alt="logo"
@@ -37,7 +37,7 @@ const Navbar = () => {
                         height={80}
                         className="md:w-[70px] md:h-[70px] w-[40px] h-[40px]"
                     />
-                </a>
+                </Link>
                 <input
                     type="checkbox"
                     role="button"
