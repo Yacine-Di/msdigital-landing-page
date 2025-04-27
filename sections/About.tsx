@@ -18,7 +18,7 @@ const About = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 className="max-w-6xl mx-auto"
             >
-                <h2 className="text-center font-bold text-white text-4xl mb-6 font-graphik">
+                <h2 className="text-center font-bold text-white text-4xl mb-6 font-roboto">
                     À propos
                 </h2>
                 <div className="flex flex-col md:flex-row items-center gap-8">

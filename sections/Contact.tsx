@@ -117,10 +117,10 @@ const Contact: React.FC<ContactProps> = ({
             id="contact"
         >
             <div className="max-w-xl mx-auto">
-                <h2 className="text-center py-2 text-4xl font-graphik font-bold">
+                <h2 className="text-center py-2 text-4xl font-roboto font-bold">
                     Discutons
                 </h2>
-                <p className="text-center font-bold text-text-secondary font-graphik text-2xl py-4">
+                <p className="text-center font-bold text-text-secondary font-roboto text-2xl py-4">
                     Que vous ayez une idée de projet, une demande de devis ou
                     une question, je vous réponds rapidement.
                 </p>
@@ -181,7 +181,7 @@ const Contact: React.FC<ContactProps> = ({
                         </label>
                         <button
                             type="submit"
-                            className="w-full flex items-center justify-center font-graphik font-bold text-lg text-white px-5 py-2 gap-3 mx-auto min-h-12 text-center bg-blue-500 hover:bg-blue-400 rounded-lg"
+                            className="w-full flex items-center justify-center font-roboto font-bold text-lg text-white px-5 py-2 gap-3 mx-auto min-h-12 text-center bg-blue-500 hover:bg-blue-400 rounded-lg"
                             disabled={isLoading}
                         >
                             {isLoading ? 'Envoi en cours...' : 'Envoyer'}

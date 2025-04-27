@@ -22,8 +22,8 @@ const ExpertiseItems = () => {
                 className="mb-4 p-2 box-content rounded-lg border-2 bg-blue-500"
                 alt={alt}
             />
-            <h3 className="text-xl font-graphik font-bold mb-4">{title}</h3>
-            <p className="text-lg font-graphik">{text}</p>
+            <h3 className="text-xl font-roboto font-bold mb-4">{title}</h3>
+            <p className="text-lg font-roboto">{text}</p>
         </motion.div>
     ));
 };
@@ -37,10 +37,10 @@ const Expertise = () => {
             id="expertise"
         >
             <div className="max-w-7xl p-5 mx-auto flex flex-col align-center">
-                <h2 className="text-center font-graphik font-bold text-4xl py-2">
+                <h2 className="text-center font-roboto font-bold text-4xl py-2">
                     Mon expertise
                 </h2>
-                <p className="p-5 text-xl font-graphik">{expertiseSubtitle}</p>
+                <p className="p-5 text-xl font-roboto">{expertiseSubtitle}</p>
                 {isClient ? (
                     <motion.div
                         className="flex flex-col p-2 gap-4 lg:flex-row max-w-7xl"

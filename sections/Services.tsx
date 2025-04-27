@@ -28,10 +28,10 @@ const ServiceItems: React.FC<ServiceItemProps> = ({ setSelectedService }) => {
                 className={`child ${id === 2 ? ' bg-blue-600' : 'bg-neutral-700'} m-2 p-2 text-white rounded-lg basis-1/4`}
                 variants={fadeInUp}
             >
-                <h3 className="text-xl font-bold font-graphik py-2 text-center">
+                <h3 className="text-xl font-bold font-roboto py-2 text-center">
                     {title}
                 </h3>
-                <p className="font-graphik text-3xl py-2 text-center">
+                <p className="font-roboto text-3xl py-2 text-center">
                     {id === 4 ? (
                         <span className="font-bold">{price}</span>
                     ) : (
@@ -41,12 +41,12 @@ const ServiceItems: React.FC<ServiceItemProps> = ({ setSelectedService }) => {
                         </>
                     )}
                 </p>
-                <p className="font-graphik text-lg py-4 mb-2 text-center">
+                <p className="font-roboto text-lg py-4 mb-2 text-center">
                     {description}
                 </p>
                 <div className=" w-full flex items-center justify-center border-y-2 border-white p-2">
                     <button
-                        className={`${id === 2 ? 'bg-white hover:bg-white/90 text-black' : 'bg-blue-600 hover:bg-blue-600/80 text-white'} font-semibold font-graphik text-lg w-3/4  py-2 mx-auto rounded-lg`}
+                        className={`${id === 2 ? 'bg-white hover:bg-white/90 text-black' : 'bg-blue-600 hover:bg-blue-600/80 text-white'} font-semibold font-roboto text-lg w-3/4  py-2 mx-auto rounded-lg`}
                         onClick={() => handleServiceClick(type)}
                     >
                         Contactez-moi
@@ -55,7 +55,7 @@ const ServiceItems: React.FC<ServiceItemProps> = ({ setSelectedService }) => {
                 <div className="my-4">
                     <ul>
                         {available.map((feature, index) => (
-                            <li key={index} className="flex mt-2 font-graphik">
+                            <li key={index} className="flex mt-2 font-roboto">
                                 <div className="w-[16px] h-[16px] flex flex-none translate-y-[6px]">
                                     <Image
                                         src="/assets/check.svg"
@@ -70,7 +70,7 @@ const ServiceItems: React.FC<ServiceItemProps> = ({ setSelectedService }) => {
                             </li>
                         ))}
                         {unavailable.map((feature, index) => (
-                            <li key={index} className="flex mt-2 font-graphik">
+                            <li key={index} className="flex mt-2 font-roboto">
                                 <div className="w-[16px] h-[16px] flex flex-none translate-y-[6px]">
                                     <Image
                                         src="/assets/red-cross.svg"
@@ -107,7 +107,7 @@ const Services = ({
                     id="services"
                 >
                     <div className="max-w-7xl mx-auto flex flex-col justify-center">
-                        <h2 className="text-center py-2 text-white text-4xl font-graphik font-bold">
+                        <h2 className="text-center py-2 text-white text-4xl font-roboto font-bold">
                             Services
                         </h2>
                         <motion.div
@@ -132,7 +132,7 @@ const Services = ({
                     id="services"
                 >
                     <div className="max-w-7xl mx-auto flex flex-col justify-center">
-                        <h2 className="text-center py-2 text-white text-4xl font-graphik font-bold">
+                        <h2 className="text-center py-2 text-white text-4xl font-roboto font-bold">
                             Services
                         </h2>
                         <div className="flex flex-col lg:flex-row p-5">
