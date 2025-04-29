@@ -9,28 +9,8 @@ export default {
     ],
     theme: {
         extend: {
-            colors: {
-                primary: {
-                    DEFAULT: '#007BFF', // Orange vif (par défaut)
-                    light: '#66B2FF', // Bleu foncé (Hover, accent)
-                },
-                secondary: {
-                    DEFAULT: '#FBC02D', // Jaune moutarde (boutons secondaires)
-                    hover: '#F9A825', // Jaune doré (hover des boutons secondaires)
-                },
-                text: {
-                    primary: '#212121', // Noir doux (texte principal)
-                    secondary: '#757575', // Gris chaud (texte secondaire)
-                    footer: '#FAF3E0', // Beige clair (texte dans le footer)
-                },
-                card: '#00248F',
-            },
             backgroundColor: {
-                DEFAULT: '#FAF3E0', // Crème doux (fond général)
-                alternate: '#F6E7D8', // Beige clair (sections alternées)
-                services: '#66B2FF',
-                card: '#AADFFF',
-                footer: '#000', // Brun chocolat (fond du footer)
+                footer: '#000',
             },
             fontFamily: {
                 roboto: ['Roboto', 'sans-serif'],
@@ -39,9 +19,6 @@ export default {
                 400: '400',
                 500: '500',
                 700: '700',
-            },
-            borderColor: {
-                card: '#007BFF ',
             },
         },
     },

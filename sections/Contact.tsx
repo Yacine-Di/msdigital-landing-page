@@ -120,7 +120,7 @@ const Contact: React.FC<ContactProps> = ({
                 <h2 className="text-center py-2 text-4xl font-roboto font-bold">
                     Discutons
                 </h2>
-                <p className="text-center font-bold text-text-secondary font-roboto text-2xl py-4">
+                <p className="text-center font-bold font-roboto text-2xl py-4">
                     Que vous ayez une idée de projet, une demande de devis ou
                     une question, je vous réponds rapidement.
                 </p>
